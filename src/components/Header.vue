@@ -88,7 +88,6 @@ section.header
 			justify-content: center;
 		}
 
-
 	}
 
 	&__btn {
