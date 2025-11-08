@@ -1,7 +1,7 @@
 <template lang="pug">
 .advantages-card
-	.advantages-card__icon
-		img(:src="icon" :alt="`Иконка ${title}`")
+	.advantages-card__icon-wrapper
+		img.advantages-card__icon(:src="icon" :alt="`Иконка ${title}`")
 	h3.advantages-card__title {{ title }}
 	p.advantages-card__desc {{ desc }}
 
@@ -27,16 +27,22 @@
 <style lang="less" scoped>
 @import "@/styles/mixins.less";
 
-.advantages{
-	&-card {
-		text-align: center;
-		padding: 1.5rem;
-		border-radius: 0.5rem;
-		transition: box-shadow 0.2s ease-in-out;
+.advantages-card {
+	.section-card();
+	text-align: center;
 
-		&:hover {
-			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-		}
+	&__icon-wrapper {
+		.flex-center();
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		background-color: var(--blue-100);
+		margin: 0 auto;
+	}
+
+	&__icon {
+		width: 2rem;
+		height: 2rem;
 	}
 }
 </style>

@@ -16,78 +16,56 @@ section.advantages
 </template>
 
 <script setup>
+	import AdvantagesCard from "@/components/Advantages/AdvantagesCard.vue";
 
-import AdvantagesCard from "@/components/Advantages/AdvantagesCard.vue";
-
-const advantages = [
-	{
-		icon: '/image/advantages/lightning.svg',
-		title: 'Быстро',
-		desc: 'Оперативная разработка и внедрение решений для вашего бизнеса'
-	},
-	{
-		icon: '/image/advantages/security.svg',
-		title: 'Надежно',
-		desc: 'Высокие стандарты безопасности и качества кода'
-	},
-	{
-		icon: '/image/advantages/stonks.svg',
-		title: 'Эффективно',
-		desc: 'Увеличиваем конверсию и рост вашего бизнеса'
-	},
-	{
-		icon: '/image/advantages/support.svg',
-		title: 'Поддержка',
-		desc: 'Круглосуточная техническая поддержка и консультации'
-	}
-]
+	const advantages = [
+		{
+			icon: '/image/advantages/lightning.svg',
+			title: 'Быстро',
+			desc: 'Оперативная разработка и внедрение решений для вашего бизнеса'
+		},
+		{
+			icon: '/image/advantages/security.svg',
+			title: 'Надежно',
+			desc: 'Высокие стандарты безопасности и качества кода'
+		},
+		{
+			icon: '/image/advantages/stonks.svg',
+			title: 'Эффективно',
+			desc: 'Увеличиваем конверсию и рост вашего бизнеса'
+		},
+		{
+			icon: '/image/advantages/support.svg',
+			title: 'Поддержка',
+			desc: 'Круглосуточная техническая поддержка и консультации'
+		}
+	]
 </script>
 
 <style lang="less" scoped>
 @import "@/styles/mixins.less";
 
 .advantages {
-	padding: 5rem 0;
-	background: var(--white);
+	.section();
 
 	&__container {
-		margin: 0 auto;
-		padding: 0 1rem;
+		.container();
 	}
 
 	&__header {
-		text-align: center;
-		margin-bottom: 4rem;
+		.section-header();
 	}
 
 	&__title {
-		font-size: 2.25rem;
-		font-weight: 700;
-		line-height: 1.2;
-		margin-bottom: 1rem;
-		color: var(--gray-900);
+		.section-title();
 	}
 
 	&__subtitle {
-		font-size: 1rem;
-		line-height: 1.6;
-		color: var(--gray-600);
-		max-width: 32rem;
-		margin: 0 auto;
+		.section-subtitle(32rem);
 	}
 
 	&__items {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 2rem;
-
-		@media (max-width: 768px) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		@media (max-width: 640px) {
-			grid-template-columns: 1fr;
-		}
+		.section-items();
 	}
 }
 </style>
