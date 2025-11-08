@@ -29,7 +29,6 @@ section.header
 	padding: 0 1.5rem;
 	border: none;
 	border-radius: 0.375rem;
-	font-weight: 400;
 	transition: all 0.2s ease-in-out;
 	cursor: pointer;
 	font-size: 1rem;
@@ -43,8 +42,6 @@ section.header
 	overflow: hidden;
 
 	&__content {
-		max-width: 1200px;
-		margin: 0 auto;
 		padding: 6rem 1rem;
 
 		@media (min-width: 768px) {

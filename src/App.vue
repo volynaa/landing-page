@@ -7,7 +7,7 @@ Services
 <script setup>
 import Header from "@/components/Header.vue";
 import Advantages from "@/components/Advantages/Advantages.vue";
-import Services from "@/components/Services.vue";
+import Services from "@/components/Services/Services.vue";
 </script>
 
 <style scoped></style>

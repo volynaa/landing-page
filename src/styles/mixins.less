@@ -8,3 +8,59 @@
   display: flex;
   flex-direction: column;
 }
+
+.section() {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.container() {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-header() {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title() {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--gray-900);
+}
+
+.section-subtitle(@max-width: none) {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--gray-600);
+  margin: 0 auto;
+  max-width: @max-width;
+}
+
+.section-items() {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-card() {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+}
