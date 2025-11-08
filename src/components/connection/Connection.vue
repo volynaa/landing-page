@@ -1,5 +1,5 @@
 <template lang="pug">
-section.connection
+section.connection(id="contact-block")
 	.connection__container
 		.connection__header
 			.connection__title Свяжитесь с нами

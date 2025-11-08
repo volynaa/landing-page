@@ -16,7 +16,13 @@ section.header
 
 <script setup>
 	function scrollToContact(){
-
+		const targetElement = document.getElementById('contact-block');
+		if (targetElement) {
+			targetElement.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
+		}
 	}
 </script>
 
