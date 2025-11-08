@@ -1,5 +1,5 @@
 <template lang="pug">
-section.header
+section.header(id="header-block")
 	.header__content
 		.text__content
 			h1.header__title Создаем цифровые решения для вашего бизнеса
