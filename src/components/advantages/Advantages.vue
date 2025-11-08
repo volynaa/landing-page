@@ -16,7 +16,7 @@ section.advantages
 </template>
 
 <script setup>
-	import AdvantagesCard from "@/components/Advantages/AdvantagesCard.vue";
+	import AdvantagesCard from "@/components/advantages/AdvantagesCard.vue";
 
 	const advantages = [
 		{

@@ -20,7 +20,7 @@ section.services
 </template>
 
 <script setup>
-	import ServicesCard from "@/components/Services/ServicesCard.vue";
+	import ServicesCard from "@/components/services/ServicesCard.vue";
 
 	const services = [
 		{
@@ -76,9 +76,8 @@ section.services
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
-		margin-bottom: 4rem;
 		max-width: 64rem;
-
+		margin: 2rem auto;
 		@media (max-width: 768px) {
 			grid-template-columns: 1fr;
 		}

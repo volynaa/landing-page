@@ -11,6 +11,7 @@ section.header
 			button.header__btn.header__btn--info
 				span Узнать больше
 	.header-gradient
+
 </template>
 
 <script setup>
@@ -114,7 +115,7 @@ section.header
 
 	}
 
-	&__gradient {
+	&-gradient {
 		position: absolute;
 		bottom: 0;
 		left: 0;
