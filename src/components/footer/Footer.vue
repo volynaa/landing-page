@@ -2,7 +2,7 @@
 footer.footer
 	.footer__container
 		.footer__content
-			.footer__section
+			.footer__section(v-once)
 				h3.footer__title О компании
 				p.footer__text Мы создаем инновационные цифровые решения для бизнеса любого масштаба.
 

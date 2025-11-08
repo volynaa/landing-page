@@ -1,6 +1,6 @@
 <template lang="pug">
 .services-send-message
-	.services-send-message__header
+	.services-send-message__header(v-once)
 		h3.services-send-message__title Отправить сообщение
 		p.services-send-message__description Заполните форму ниже, и мы свяжемся с вами в ближайшее время
 	.services-send-message__content
@@ -20,13 +20,13 @@
 			)
 
 			MyInput(
-				id="email"
+				id="mail"
 				label="Email"
-				v-model="form.email"
-				:validation-class="validation('email')"
+				v-model="form.mail"
+				:validation-class="validation('mail')"
 				placeholder="your@mail.ru"
-				:error-message="fieldErrors.email"
-				:show-error="v$.form.email.$error && v$.form.email.$dirty"
+				:error-message="fieldErrors.mail"
+				:show-error="v$.form.mail.$error && v$.form.mail.$dirty"
 			)
 
 			MyInput(
@@ -52,13 +52,13 @@ import MyInput from "@/components/UI/MyInput.vue";
 
 interface FormData {
 	name: string,
-	email: string,
+	mail: string,
 	message: string,
 }
 
 const form = ref<FormData>({
 	name: '',
-	email: '',
+	mail: '',
 	message: ''
 })
 
@@ -66,7 +66,7 @@ const submitted = ref<boolean>(false);
 
 const fieldErrors = computed<FormData>(() => ({
 	name: v$.value.form.name.$errors[0]?.$message || '',
-	email: v$.value.form.email.$errors[0]?.$message || '',
+	mail: v$.value.form.mail.$errors[0]?.$message || '',
 	message: v$.value.form.message.$errors[0]?.$message || ''
 }))
 
@@ -81,7 +81,7 @@ const rules = computed(() => ({
 				(value: string) => !value || /^[a-zA-Zа-яА-ЯёЁ\s\-]+$/.test(value)
 			)
 		},
-		email: {
+		mail: {
 			required: helpers.withMessage('Email обязателен для заполнения', required),
 			email: helpers.withMessage('Введите корректный email адрес', email)
 		},
@@ -119,7 +119,7 @@ function validation(type: keyof FormData | null): string {
 
 function clearForm(): void {
 	form.value.name = '';
-	form.value.email = '';
+	form.value.mail = '';
 	form.value.message = '';
 	v$.value.$reset();
 }
@@ -190,8 +190,8 @@ async function handleSubmit (): Promise<void> {
 	margin-bottom: 1rem;
 
 	&_success {
-		background-color: car(--emerald-100);
-		color: car(--emerald-800);
+		background-color: var(--emerald-100);
+		color: var(--emerald-800);
 	}
 }
 

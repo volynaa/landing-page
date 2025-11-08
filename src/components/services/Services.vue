@@ -1,12 +1,12 @@
 <template lang="pug">
 section.services
 	.services__container
-		.services__header
+		.services__header(v-once)
 			h2.services__title Наши услуги
 			p.services__subtitle Полный спектр услуг для развития вашего цифрого присутствия
 		.services__images
-			img.services__image(src="/image/services/services-hands.jpg")
-			img.services__image(src="/image/services/services-home.jpg")
+			img.services__image(src="/image/services/services-hands.webp" loading="lazy" alt="Руки, работающие на ноутбуке")
+			img.services__image(src="/image/services/services-home.webp" loading="lazy" alt="Уютный домашний офис")
 		.services__items
 			ServicesCard(
 				v-for="(item, index) in services"

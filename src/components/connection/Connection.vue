@@ -1,6 +1,6 @@
 <template lang="pug">
 section.connection(id="contact-block")
-	.connection__container
+	.connection__container(v-once)
 		.connection__header
 			.connection__title Свяжитесь с нами
 			.connection__desc Готовы начать проект? Напишите нам, и мы ответим в течении 24 часов
@@ -9,7 +9,7 @@ section.connection(id="contact-block")
 </template>
 
 <script setup>
-import ConnectionSendMessage from "@/components/connection/ConnectionSendMessage.vue";
+	import ConnectionSendMessage from "@/components/connection/ConnectionSendMessage.vue";
 </script>
 
 <style lang="less" scoped>
