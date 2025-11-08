@@ -10,25 +10,25 @@ footer.footer
 				h3.footer__title Услуги
 				ul.footer__list
 					li.footer__item
-						a.footer__link(href="#") Веб-разработка
+						a.footer__link(@click="scrollUp") Веб-разработка
 					li.footer__item
-						a.footer__link(href="#") Мобильные приложения
+						a.footer__link(@click="scrollUp") Мобильные приложения
 					li.footer__item
-						a.footer__link(href="#") Дизайн
+						a.footer__link(@click="scrollUp") Дизайн
 					li.footer__item
-						a.footer__link(href="#") Консалтинг
+						a.footer__link(@click="scrollUp") Консалтинг
 
 			.footer__section
 				h3.footer__title Компания
 				ul.footer__list
 					li.footer__item
-						a.footer__link(href="#") О нас
+						a.footer__link(@click="scrollUp") О нас
 					li.footer__item
-						a.footer__link(href="#") Блог
+						a.footer__link(@click="scrollUp") Блог
 					li.footer__item
-						a.footer__link(href="#") Карьера
+						a.footer__link(@click="scrollUp") Карьера
 					li.footer__item
-						a.footer__link(href="#") Контакты
+						a.footer__link(@click="scrollUp") Контакты
 
 			.footer__section
 				h3.footer__title Контакты
@@ -41,6 +41,16 @@ footer.footer
 
 <script setup>
 	const currentYear = new Date().getFullYear();
+
+	function scrollUp() {
+		const element = document.getElementById('header-block');
+		if (element) {
+			element.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
+		}
+	}
 </script>
 
 <style lang="less">
@@ -98,6 +108,7 @@ footer.footer
 		font-size: 0.875rem;
 		text-decoration: none;
 		transition: color 0.3s ease;
+		cursor: pointer;
 
 		&:hover {
 			color: var(--white);
